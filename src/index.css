@@ -36,12 +36,59 @@ code {
 }
 
 /* //Restaurant Cards */
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .res-card {
+  margin: 5px;
   width: 200px;
-  height: 300px;
-  border: 1px solid #000;
+  height: 100%;
+  padding: 5px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.res-card:hover {
+  transform: translateY(-5px);
+  box-shadow: -1px -8px 34px -10px rgba(0, 0, 0, 0.296);
+  -webkit-box-shadow: -1px -8px 34px -10px rgba(0, 0, 0, 0.296);
+  -moz-box-shadow: -1px 16px -8px -10px rgba(0, 0, 0, 0.296);
+
 }
 
 .search {
   padding: 10px;
+}
+
+.res-logo {
+  width: 100%;
+  border-radius: 25px;
+}
+
+.res-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 5px 0;
+}
+
+.res-cuisine {
+  margin: 0;
+  font-size: 10px;
+  color: #9e9b9b;
+  font-weight: 400;
+}
+
+.res-meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.res-rating,
+.res-delivery,
+.res-price {
+  font-size: 12px;
+  font-weight: 400;
 }
