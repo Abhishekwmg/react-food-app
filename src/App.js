@@ -1,13 +1,13 @@
-import Body from "./components/Body";
-import Header from "./components/Header";
-import Shimmer from "./components/Shimmer";
-import { Outlet } from 'react-router-dom';
+import { Outlet } from "react-router-dom";
+import Header from './components/Header'
 
 const AppLayout = () => {
-  return <div className="app">
-    <Header />
-    <Outlet />
-    {/* <Body /> */}
-  </div>
+  return (
+    <div>
+      <Header />
+      <Outlet />
+    </div>
+  )
 }
+
 export default AppLayout;

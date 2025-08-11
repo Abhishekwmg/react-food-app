@@ -42,7 +42,6 @@ const Body = () => {
             </div>
             <div className="res-container">
                 {filterList.map((d) => {
-                    console.log(d)
                     return <RestaurantCard resData={d.info} key={d.info.id} />
                 })}
             </div>
