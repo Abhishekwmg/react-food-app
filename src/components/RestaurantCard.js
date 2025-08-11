@@ -1,5 +1,5 @@
 const RestaurantCard = (props) => {
-    // console.log(props)
+    console.log(props)
     const { avgRating, cuisines, name, costForTwo, cloudinaryImageId } = props.resData;
     return (
         <div className="res-card">

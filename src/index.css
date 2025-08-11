@@ -164,8 +164,17 @@ code {
 .food-card {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  margin: 0 125px;
   border-bottom: 1px solid #ddd;
   padding-bottom: 15px;
+}
+
+.divided {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  margin: 10px 0;
+  padding-bottom: 20px;
 }
 
 .food-info {
@@ -204,6 +213,11 @@ code {
 .food-description {
   font-size: 14px;
   color: #666;
+  max-width: 550px;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.4;
 }
 
 .food-image {
@@ -234,4 +248,65 @@ code {
 .customisable {
   font-size: 12px;
   color: gray;
+}
+
+/* Restaurant Menu - res header */
+/* RestaurantHeader.css */
+.restaurant-header {
+  font-family: Arial, sans-serif;
+  border-bottom: 1px solid #ddd;
+  /* margin-bottom: 20px; */
+  margin: 0 125px;
+}
+
+.restaurant-banner {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.restaurant-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.restaurant-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.restaurant-cuisines {
+  font-size: 14px;
+  color: #777;
+  margin: 5px 0;
+}
+
+.restaurant-location {
+  font-size: 14px;
+  color: #999;
+}
+
+.restaurant-info {
+  display: flex;
+  gap: 20px;
+}
+
+.info-block {
+  text-align: center;
+}
+
+.info-block span {
+  font-weight: bold;
+  display: block;
+  font-size: 16px;
+}
+
+.info-block p {
+  font-size: 12px;
+  color: #777;
+  margin: 2px 0 0;
 }
