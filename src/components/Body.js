@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import RestaurantCard from '../components/RestaurantCard'
 import Shimmer from './Shimmer';
 import { Link } from 'react-router-dom';
+import useOnlineStatus from '../utils/useOnlineStatus';
+import Offline from './Offline';
 
 
 const Body = () => {
@@ -35,6 +37,10 @@ const Body = () => {
         );
         setFilterList(searchFiltered);
     }
+
+    const onlineStatus = useOnlineStatus();
+
+    if (onlineStatus === false) return <Offline />
 
     if (filterList.length === 0) return <Shimmer />
 
