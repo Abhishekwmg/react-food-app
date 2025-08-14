@@ -46,12 +46,14 @@ const Body = () => {
 
     return (
         <div className="body">
-            <div className="search">
-                <input type="text" placeholder='search for any item' value={search} onChange={(e) => setSearch(e.target.value)} />
-                <button className="search" onClick={handleSearch}>Search</button>
-            </div>
-            <div className='filter-btn'>
-                <button className="filter-btnbtn" onClick={handleFilterList}>Filter</button>
+            <div className='filter flex items-center'>
+                <div className="search m-4 p-4">
+                    <input className="border border-solid border-black" type="text" placeholder='search for any item' value={search} onChange={(e) => setSearch(e.target.value)} />
+                    <button className="px-4 py-1 bg-green-100 m-4 rounded-md" onClick={handleSearch}>Search</button>
+                </div>
+                <div className='px-4 py-1 bg-gray-100 rounded-md'>
+                    <button onClick={handleFilterList}>Top Rated Restaurant</button>
+                </div>
             </div>
             <div className="res-container">
                 {filterList.map((d) => {
