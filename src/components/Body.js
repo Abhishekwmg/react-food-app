@@ -55,7 +55,7 @@ const Body = () => {
                     <button onClick={handleFilterList}>Top Rated Restaurant</button>
                 </div>
             </div>
-            <div className="res-container">
+            <div className="flex flex-wrap">
                 {filterList.map((d) => {
                     console.log(d);
                     return <Link to={"/restaurants/" + d.info.id} key={d.info.id}>
