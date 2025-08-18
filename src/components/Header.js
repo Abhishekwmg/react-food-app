@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../utils/UserContext";
 
 
 const Header = () => {
 
     const [loginStatus, setLoginStatus] = useState('Login')
+
+    const data = useContext(UserContext);
+    console.log(data);
 
     function handleLogin() {
         setLoginStatus(loginStatus === "Login" ? "Logout" : "Login")
