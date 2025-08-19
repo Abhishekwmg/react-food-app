@@ -11,7 +11,7 @@ const RestaurantMenuHeader = (props) => {
             <div className="flex-1">
                 <div>
                     <h1 className="text-2xl font-bold text-gray-900">{name}</h1>
-                    <p className="text-gray-600 text-sm">{cuisines}</p>
+                    <p className="text-gray-600 text-sm">{cuisines.join(", ")}</p>
                     <p className="text-gray-500 text-sm">{city}</p>
                 </div>
 

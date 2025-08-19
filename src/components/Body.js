@@ -26,7 +26,6 @@ const Body = () => {
         const js = await data.json();
         // console.log(js);
         const restD = js?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || []
-        console.log(restD);
         setAllRestaurants(restD);
         setFilterList(restD);
     }
@@ -57,7 +56,6 @@ const Body = () => {
             </div>
             <div className="flex flex-wrap">
                 {filterList.map((d) => {
-                    console.log(d);
                     return <Link to={"/restaurants/" + d.info.id} key={d.info.id}>
                         <RestaurantCard resData={d.info} />
                     </Link>

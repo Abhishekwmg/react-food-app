@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, StrictMode, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -10,8 +10,9 @@ import Body from './components/Body'
 import Shimmer from './components/Shimmer';
 import RestaurantMenu from './components/RestaurantMenu';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
-const Grocery = lazy(() => import('./components/Grocery'));
+const Cart = lazy(() => import('./components/Cart'));
 const About = lazy(() => import('./components/About'));
 
 const appRouter = createBrowserRouter([
@@ -32,8 +33,8 @@ const appRouter = createBrowserRouter([
                 element: <Contact />
             },
             {
-                path: "/grocery",
-                element: <Suspense fallback={<h1>Loading...</h1>}><Grocery /></Suspense>
+                path: "/cart",
+                element: <Suspense fallback={<h1>Loading...</h1>}><Cart /></Suspense>
             },
             {
                 path: "/restaurants/:resId",
@@ -48,7 +49,8 @@ const appRouter = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-
-    <RouterProvider router={appRouter} />
+    <StrictMode>
+        <RouterProvider router={appRouter} />
+    </StrictMode>
 
 );

@@ -1,7 +1,15 @@
 import { useState } from "react";
 import ItemList from "./ItemList";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 
 const RestaurantFoodList = (props) => {
+
+    const dispatch = useDispatch();
+
+    const handleAction = () => {
+        dispatch(addItem("pizza"));
+    }
 
     const { category } = props;
     return <>
@@ -13,7 +21,7 @@ const RestaurantFoodList = (props) => {
                         <span className="text-lg font-bold">{title} ({itemCards.length})</span>
                         <span>⬆️</span>
                     </div>
-                    <ItemList itemCards={itemCards} />
+                    <ItemList itemCards={itemCards} onDispatch={handleAction} />
                 </div>
             )
         })}

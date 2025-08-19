@@ -3,7 +3,6 @@ export default function OfflinePage({ onRetry }) {
         <div className="offline-root" role="alert" aria-live="polite">
             <div className="offline-card">
                 <div className="offline-illustration" aria-hidden>
-                    {/* simple SVG icon */}
                     <svg width="72" height="72" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="1" y="5" width="22" height="14" rx="2" stroke="currentColor" strokeWidth="1.5" fill="none" />
                         <path d="M3 9h18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
